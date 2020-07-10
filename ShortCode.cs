@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -63,7 +64,7 @@ public static class ShortCode
             // 取对应子串
             string subStr = orgStr.Substring(i, 8);
             // 将子串转为长整型（32bit）
-            if (ulong.TryParse(subStr, System.Globalization.NumberStyles.HexNumber, System.Globalization.CultureInfo.InvariantCulture, out ulong orgNum))
+            if (ulong.TryParse(subStr, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out ulong orgNum))
             {
                 // 取随机数（6bit），用来决定6位短码各字符的源集合
                 int randomInt = GetRandomInt(0, 1 << 6);
