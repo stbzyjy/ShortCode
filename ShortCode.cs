@@ -47,7 +47,7 @@ public static class ShortCode
     }
 
     /// <summary>
-    /// 生成4个不同的6位短码
+    /// 生成一组四个6位短码
     /// </summary>
     /// <param name="md5"></param>
     /// <returns></returns>
